@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <arpa/inet.h>  // Header for functions related to Internet addresses
+#include <unistd.h>     // Header for various symbolic constants and types
+
+int main() {
+    // Define the server's IP address and port
+    const char *server_ip = "127.0.0.1";  // Hardcoded server IP address
+    int server_port = 12345;             // Hardcoded server port
+
+    // Create a socket
+    int sockfd = socket(AF_INET, SOCK_DGRAM, 0);  // Create a socket for UDP communication
+    if (sockfd < 0) {
+        perror("Socket creation error");  // Print an error message if socket creation fails
+        return 1;                         // Exit the program with an error code
+    }
+
+    // Set up the server address
+    struct sockaddr_in server_addr;           // Structure to hold server address information
+    server_addr.sin_family = AF_INET;         // Set address family to IPv4
+    server_addr.sin_port = htons(server_port); // Set the port number, in network byte order
+    server_addr.sin_addr.s_addr = inet_addr(server_ip); // Set the IP address
+
+    char message[1024];  // Buffer to hold the message to be sent
+
+    // Continuously read and send messages to the server
+    while (1) {
+        printf("Enter the Message to Send:: ");
+        fgets(message, sizeof(message), stdin);         // Read input message from user
+        message[strlen(message) - 1] = '\0';           // Remove the newline character
+
+        // Send the message to the server using the socket
+        sendto(sockfd, message, strlen(message), 0, (struct sockaddr *)&server_addr, sizeof(server_addr));
+
+        printf("Sent: %s\n", message);  // Print the sent message
+
+        // Check if the user wants to exit
+        if (strcmp(message, "exit") == 0) {
+            break;  // Exit the loop if the message is "exit"
+        }
+    }
+
+    // Close the socket
+    close(sockfd);  // Close the socket connection
+
+    return 0;  // Exit the program
+}
+
