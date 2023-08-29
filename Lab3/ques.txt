@@ -1,0 +1,10 @@
+Lab – 3 - Socket Programming – Connection - Oriented Protocol
+
+ Aim of the experiment:
+1. Details of Connection Oriented Socket programming APIs for TCP/IP stack using C.
+
+ Assignment
+1. Write a connection-oriented client and server program in C using command line arguments. At the server side, pass the port number (to whom the server will bind to) in the command line. At the client side, pass the IP address and the port number of the server (to whom the client will connect to) as command line argument and carry out the following tasks.
+
+i. Print all the relevant messages during the connection establishment at both the ends.
+ii. After establishment of connection exchange messages. After message exchange is over then the client sends a “close” message to the server to tear down the connection.
