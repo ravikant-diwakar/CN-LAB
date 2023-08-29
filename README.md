@@ -1,2 +1,3 @@
 # CN-LAB
-[Lab – 3 - Computer Network Lab .docx](https://github.com/ravikant-diwakar/CN-LAB/files/12460532/Lab.3.-.Computer.Network.Lab.docx)
+
+[Networks Laboratory (IT 3095), Lesson Plan-Autumn 2023.docx](https://github.com/ravikant-diwakar/CN-LAB/files/12460554/Networks.Laboratory.IT.3095.Lesson.Plan-Autumn.2023.docx)
