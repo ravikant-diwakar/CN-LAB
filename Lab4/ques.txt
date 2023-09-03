@@ -1,0 +1,39 @@
+Lab – 4 - Socket Programming – Sequential - Chat Server
+
+ Aim of the experiment:
+1. Discuss how to design a Sequential Chat Server.
+
+ Assignment
+1. Design a connection oriented concurrent chat server using fork() in C where the server will serve multiple chat clients simultaneously. When the chat server receives a “exit” message from a particular client then it terminate the respective connection with that chat client.
+
+Input/Output:
+$ ./cli 12
+7.0.0.1
+Sending message to the server....
+Hello
+Waiting for message from the server....
+Received Server Message: Hello
+Sending message to the server....
+Fine
+Waiting for message from the server.... 
+Received Server Message: Fine
+Sending message to the server....
+
+$./serv
+parent process
+creating child process
+Waiting for the message from the client::127.0.0.1->43852 
+Received Client Message: Hello
+Sending back the message to the client::127.0.0.1->43852
+Waiting for the message from the client::127.0.0.1->43852 
+Received Client Message: Fine
+Sending back the message to the client::127.0.0.1->43852 
+Waiting for the message from the client::127.0.0.1->43852
+parent process
+creating child process
+Waiting for the message from the client:: 127.0.0.1->58716
+Received Client Message: Hi 
+Sending back the message to the client::127.0.0.1->58716
+Waiting for the message from the client::127.0.0.1->58716 
+Received Client Message: exit 
+Closing the child process for client::127.0.0.1->58716
