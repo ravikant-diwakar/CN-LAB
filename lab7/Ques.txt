@@ -1,0 +1,14 @@
+Lab – 7 - Socket Programming – File Transfer
+
+ Aim of the experiment:
+1. Discuss the overview of file transfer over a computer network.
+ Assignment
+1. Write a connection-oriented client and server program in C using
+command line arguments. Do the file transfer from the server as follows.
+i. Server first sends the list of files present in the current directory at it&#39;s
+own end.
+ii. After receiving the same, client send the name of a file it wants to
+download from the server.
+iii. Finally, after receiving the same server uploads the file to the client.
+iv. After sending the file, server closes the client connection at its own
+end.
