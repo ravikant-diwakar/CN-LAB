@@ -1,0 +1,10 @@
+Lab – 6 - Socket Programming – Sequential - Chat Server - Select()
+
+ Aim of the experiment:
+1. Details of I/O multiplexing using select() API.
+2. Discuss how to design a concurrent chat server using select().
+
+Design a connection oriented concurrent chat server using select() in C where the
+server will serve multiple chat clients simultaneously. When the chat server receives a
+“exit” message from a particular client then it terminate the respective connection
+with that chat client.
