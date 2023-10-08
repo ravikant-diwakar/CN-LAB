@@ -1,1 +1,9 @@
+Lab – 5 - Socket Programming – Sequential - Chat Server - Multithreading
 
+ Aim of the experiment:
+1. Discuss how to design a Sequential Chat Server.
+ Assignment
+ Write a connection-oriented client and server socket program using C where the server
+will behave as a chat server serving multiple chat clients but one at a time. When the chat
+server receives a “bye” message from a particular client then it terminates the respective
+connection with that client.
